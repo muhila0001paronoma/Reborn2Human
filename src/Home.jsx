@@ -31,37 +31,43 @@ function Home() {
         <h2 className="section-title">Our Services</h2>
         <div className="services-grid">
           {/* Haircut */}
-          <div className="service-card">
-            <div className="service-image-wrapper">
-              <img src="/haircut.png" alt="Haircut" className="service-image" />
-              <div className="service-overlay"></div>
+          <Link to="/haircuts" className="service-card-link">
+            <div className="service-card">
+              <div className="service-image-wrapper">
+                <img src="/haircut.png" alt="Haircut" className="service-image" />
+                <div className="service-overlay"></div>
+              </div>
+              <h3>Haircut</h3>
+              <p>From classic cuts to modern fades, tailored to your look with precision</p>
+              <div className="read-more">Read more...</div>
             </div>
-            <h3>Haircut</h3>
-            <p>From classic cuts to modern fades, tailored to your look with precision</p>
-            <div className="read-more">Read more...</div>
-          </div>
+          </Link>
 
           {/* Shaving */}
-          <div className="service-card">
-            <div className="service-image-wrapper">
-              <img src="/shaving.png" alt="Shaving" className="service-image" />
-              <div className="service-overlay"></div>
+          <Link to="/beard-shaving" className="service-card-link">
+            <div className="service-card">
+              <div className="service-image-wrapper">
+                <img src="/shaving.png" alt="Shaving" className="service-image" />
+                <div className="service-overlay"></div>
+              </div>
+              <h3>Shaving</h3>
+              <p>Traditional shaves & luxury hot towel treatment for a clean, sharp finish</p>
+              <div className="read-more">Read more...</div>
             </div>
-            <h3>Shaving</h3>
-            <p>Traditional shaves & luxury hot towel treatment for a clean, sharp finish</p>
-            <div className="read-more">Read more...</div>
-          </div>
+          </Link>
 
           {/* Styling */}
-          <div className="service-card">
-            <div className="service-image-wrapper">
-              <img src="/styling.png" alt="Styling" className="service-image" />
-              <div className="service-overlay"></div>
+          <Link to="/hairstyling" className="service-card-link">
+            <div className="service-card">
+              <div className="service-image-wrapper">
+                <img src="/styling.png" alt="Styling" className="service-image" />
+                <div className="service-overlay"></div>
+              </div>
+              <h3>Styling</h3>
+              <p>Professional styling with premium products to keep you looking sharp</p>
+              <div className="read-more">Read more...</div>
             </div>
-            <h3>Styling</h3>
-            <p>Professional styling with premium products to keep you looking sharp</p>
-            <div className="read-more">Read more...</div>
-          </div>
+          </Link>
         </div>
 
         <Link to="/haircuts">

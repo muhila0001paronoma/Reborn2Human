@@ -7,6 +7,7 @@ import Facial from './services/Facial';
 import BeardShaving from './services/BeardShaving';
 import SpecialGrooming from './services/SpecialGrooming';
 import Haircut from './services/Haircut';
+import OurPackages from './services/OurPackages';
 
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
         <Route path="/beard-shaving" element={<BeardShaving />} />
         <Route path="/grooming" element={<SpecialGrooming />} />
         <Route path="/haircut" element={<Haircut />} />
-        <Route path="/packages" element={<Haircut />} />
+        <Route path="/haircuts" element={<Haircut />} />
+        <Route path="/packages" element={<OurPackages />} />
       </Routes>
     </Router>
   );

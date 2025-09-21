@@ -1,8 +1,8 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";  // for dynamic links
+import { Link, useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import "./services.css";
+import "./services.css"; // Using the unified CSS
 
 const servicesList = [
   "Haircuts",
@@ -14,29 +14,56 @@ const servicesList = [
 ];
 
 const serviceCards = [
-  { name: "Classic Haircut", description: "Professional Haircut with styling finish", duration: "30 mins", price: "LKR 1500.00", reviews: "4.8 (120 Reviews)", image: "/h1.png" },
-  { name: "Taper Fade Haircut", description: "Modern low/high fade for sharp look", duration: "40 mins", price: "LKR 1900.00", reviews: "4.6 (43 Reviews)", image: "/h2.png" },
-  { name: "Undercut", description: "Trendy undercut with style finish", duration: "40 mins", price: "LKR 2200.00", reviews: "4.5 (230 Reviews)", image: "/h3.png" },
-  { name: "Scissor Cut", description: "Layered scissor cut for natural style", duration: "45 mins", price: "LKR 3000.00", reviews: "4.3 (21 Reviews)", image: "/h4.png" },
-  { name: "Buzz Cut", description: "Simple clean clipper cut", duration: "20 mins", price: "LKR 1000.00", reviews: "4.5 (423 Reviews)", image: "/h5.png" },
+  {
+    name: "Quick Fix Combo",
+    description: "Haircut + Beard Trim",
+    duration: "35 mins",
+    price: "LKR 2500.00",
+    reviews: "4.7 (15 Reviews)",
+    image: "/p1.png",
+  },
+  {
+    name: "Premium Combo",
+    description: "Haircut + Beard Styling + Wash",
+    duration: "75 mins",
+    price: "LKR 3500.00",
+    reviews: "4.8 (25 Reviews)",
+    image: "/p2.png",
+  },
+  {
+    name: "Luxury Grooming Pack",
+    description: "Haircut + Beard Shaving + Facial",
+    duration: "90 mins",
+    price: "LKR 6000.00",
+    reviews: "5.0 (3 Reviews)",
+    image: "/p3.png",
+  },
+  {
+    name: "Wedding Pack",
+    description: "Full groom styling (trial + event)",
+    duration: "150 mins",
+    price: "LKR 13800.00",
+    reviews: "4.0 (1 Reviews)",
+    image: "/p4.png",
+  },
 ];
 
-const Haircut = () => {
-  const location = useLocation(); // get current path
+const OurPackages = () => {
+  const location = useLocation();
 
   return (
     <div className="haircut-page">
       <Navbar />
 
-      {/* --- Hero Section --- */}
+      {/* Hero Section */}
       <section className="haircut-hero">
-        <h1>Hair Cuts</h1>
-        <p>Expert grooming tailored for your style and confidence</p>
+        <h1>Our Packages</h1>
+        <p>Tailored grooming combos for every occasion</p>
         <button className="haircut-hero-btn">Book Appointment</button>
       </section>
 
       <div className="haircut-content">
-        {/* --- Left Sidebar --- */}
+        {/* Sidebar */}
         <aside className="haircut-sidebar">
           {servicesList.map((service, index) => {
             let route = "";
@@ -61,7 +88,7 @@ const Haircut = () => {
           })}
         </aside>
 
-        {/* --- Right Service Cards --- */}
+        {/* Service Cards */}
         <div className="haircut-services-grid">
           {serviceCards.map((card, index) => (
             <div key={index} className="haircut-service-card">
@@ -87,4 +114,4 @@ const Haircut = () => {
   );
 };
 
-export default Haircut;
+export default OurPackages;

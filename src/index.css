@@ -225,6 +225,12 @@ body {
   gap: 1.5rem;
 }
 
+.service-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .service-card {
   background: rgba(0, 0, 0, 0.6);
   border: 2px solid #fff;
