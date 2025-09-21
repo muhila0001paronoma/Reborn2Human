@@ -8,6 +8,9 @@ import BeardShaving from './services/BeardShaving';
 import SpecialGrooming from './services/SpecialGrooming';
 import Haircut from './services/Haircut';
 import OurPackages from './services/OurPackages';
+import SignIn from './auth/SignIn';
+import SignUp from './auth/SignUp';
+import ForgotPassword from './auth/ForgotPassword';
 
 
 function App() {
@@ -22,6 +25,9 @@ function App() {
         <Route path="/haircut" element={<Haircut />} />
         <Route path="/haircuts" element={<Haircut />} />
         <Route path="/packages" element={<OurPackages />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
       </Routes>
     </Router>
   );

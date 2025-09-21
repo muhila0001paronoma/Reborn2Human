@@ -23,9 +23,9 @@ function Navbar() {
         <button className="btn-white">
           Book Appointment
         </button>
-        <button className="btn-outline">
+        <Link to="/signin" className="btn-outline">
           Sign In
-        </button>
+        </Link>
       </div>
     </nav>
   );
