@@ -1,0 +1,212 @@
+/* Haircut Page Styles */
+.haircut-page {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+/* Hero Section */
+.haircut-hero {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  margin-bottom: 40px;
+}
+
+.haircut-hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.haircut-hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.haircut-hero-btn {
+  background: linear-gradient(45deg, #ff6b35, #f7931e);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.haircut-hero-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
+}
+
+/* Content Layout */
+.haircut-content {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 40px;
+}
+
+/* Sidebar */
+.haircut-sidebar {
+  flex: 0 0 250px;
+  background: white;
+  border-radius: 10px;
+  padding: 30px 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+}
+
+.haircut-service-type {
+  display: block;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.haircut-service-type:hover {
+  background-color: #f8f9fa;
+  color: #ff6b35;
+  border-left-color: #ff6b35;
+}
+
+.haircut-service-type.active {
+  background-color: #ff6b35;
+  color: white;
+  border-left-color: #ff6b35;
+}
+
+/* Services Grid */
+.haircut-services-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* Service Cards */
+.haircut-service-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.haircut-service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.haircut-service-image-wrapper {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.haircut-service-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.haircut-service-card:hover .haircut-service-image {
+  transform: scale(1.05);
+}
+
+.haircut-service-card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 20px 20px 10px 20px;
+  color: #333;
+}
+
+.haircut-service-card p {
+  margin: 0 20px 10px 20px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.haircut-service-card p:last-of-type {
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #ff6b35;
+}
+
+.haircut-book-btn {
+  background: linear-gradient(45deg, #ff6b35, #f7931e);
+  color: white;
+  text-align: center;
+  padding: 12px 20px;
+  margin: 0 20px 20px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.haircut-book-btn:hover {
+  background: linear-gradient(45deg, #e55a2b, #e0841a);
+  transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .haircut-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .haircut-sidebar {
+    flex: none;
+    order: 2;
+  }
+  
+  .haircut-services-grid {
+    order: 1;
+    grid-template-columns: 1fr;
+  }
+  
+  .haircut-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .haircut-hero p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .haircut-hero {
+    padding: 60px 15px;
+  }
+  
+  .haircut-content {
+    padding: 0 15px;
+  }
+  
+  .haircut-service-card h3 {
+    font-size: 1.2rem;
+  }
+}
